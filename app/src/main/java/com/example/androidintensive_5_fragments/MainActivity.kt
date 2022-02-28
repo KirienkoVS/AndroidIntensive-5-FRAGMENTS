@@ -1,7 +1,6 @@
 package com.example.androidintensive_5_fragments
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity: AppCompatActivity(), ContactsFragment.ContactClickListener, ContactDetailsFragment.SaveButtonClickListener {
@@ -17,12 +16,11 @@ class MainActivity: AppCompatActivity(), ContactsFragment.ContactClickListener, 
                 commit()
             }
         }
-        Log.d(MAIN_ACTIVITY_TAG, "onCreate")
     }
 
-    override fun onContactClicked(bundle: Bundle) {
+    override fun onContactClicked(bundle: Bundle, contactID: String) {
         supportFragmentManager.beginTransaction().run {
-            replace(R.id.fragment_container, ContactDetailsFragment.newInstance(bundle), CONTACT_DETAILS_FRAGMENT_TAG)
+            replace(R.id.fragment_container, ContactDetailsFragment.newInstance(bundle, contactID), CONTACT_DETAILS_FRAGMENT_TAG)
             addToBackStack(CONTACT_DETAILS_FRAGMENT_TAG)
             commit()
         }
