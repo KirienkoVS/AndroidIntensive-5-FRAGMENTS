@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AndroidIntensive_5_Fragments</string>
+    <string name="edit_button">Edit</string>
+    <string name="save_button">Save</string>
+    <string name="name_property">Name:</string>
+    <string name="last_name_property">Last name:</string>
+    <string name="phone_number_property">Phone number:</string>
 </resources>

@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    // ContactsFragment
+    <style name="contacts_fragment_root_layout">
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">16dp</item>
+    </style>
+    <style name="contacts_fragment_contact_layout">
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:background">@drawable/border</item>
+        <item name="android:elevation">4dp</item>
+    </style>
     <style name="textview_style">
         <item name="android:layout_marginStart">8dp</item>
     </style>
+
+    // ContactDetailsFragment
+    <style name="contact_fragment_details_layout">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:background">@drawable/border</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:padding">8dp</item>
+    </style>
+    <style name="contact_fragment_details_editText">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:layout_marginStart">8dp</item>
+    </style>
+
 </resources>

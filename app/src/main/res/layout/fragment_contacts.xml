@@ -5,23 +5,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    style="@style/contacts_fragment_root_layout">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/first_contact"
         android:transitionName="first_contact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:background="@drawable/border"
-        android:elevation="4dp">
+        style="@style/contacts_fragment_contact_layout">
 
         <TextView
             android:id="@+id/first_name_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name:"
+            android:text="@string/name_property"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -30,7 +27,7 @@
             android:id="@+id/first_lastName_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Last name:"
+            android:text="@string/last_name_property"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/first_name_view"
             app:layout_constraintStart_toStartOf="parent"/>
@@ -39,7 +36,7 @@
             android:id="@+id/first_phoneNumber_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Phone number:"
+            android:text="@string/phone_number_property"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/first_lastName_view"
             app:layout_constraintStart_toStartOf="parent"/>
@@ -81,16 +78,13 @@
         android:transitionName="second_contact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/border"
-        android:elevation="4dp">
+        style="@style/contacts_fragment_contact_layout">
 
         <TextView
             android:id="@+id/second_name_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name:"
+            android:text="@string/name_property"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -99,7 +93,7 @@
             android:id="@+id/second_lastName_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Last name:"
+            android:text="@string/last_name_property"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/second_name_view"
             app:layout_constraintStart_toStartOf="parent"/>
@@ -108,7 +102,7 @@
             android:id="@+id/second_phoneNumber_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Phone number:"
+            android:text="@string/phone_number_property"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/second_lastName_view"
             app:layout_constraintStart_toStartOf="parent"/>
@@ -150,16 +144,13 @@
         android:transitionName="third_contact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/border"
-        android:elevation="4dp">
+        style="@style/contacts_fragment_contact_layout">
 
         <TextView
             android:id="@+id/third_name_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name:"
+            android:text="@string/name_property"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -168,7 +159,7 @@
             android:id="@+id/third_lastName_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Last name:"
+            android:text="@string/last_name_property"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/third_name_view"
             app:layout_constraintStart_toStartOf="parent"/>
@@ -177,7 +168,7 @@
             android:id="@+id/third_phoneNumber_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Phone number:"
+            android:text="@string/phone_number_property"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/third_lastName_view"
             app:layout_constraintStart_toStartOf="parent"/>

@@ -6,17 +6,13 @@
     android:id="@+id/contact_details_layout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginStart="16dp"
-    android:layout_marginTop="16dp"
-    android:background="@drawable/border"
-    android:elevation="4dp"
-    android:padding="8dp">
+    style="@style/contact_fragment_details_layout">
 
     <TextView
         android:id="@+id/name_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name:"
+        android:text="@string/name_property"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/last_name_view"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +22,7 @@
         android:id="@+id/last_name_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Last name:"
+        android:text="@string/last_name_property"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/phone_number_view"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +32,7 @@
         android:id="@+id/phone_number_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Phone number:"
+        android:text="@string/phone_number_property"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/edit_button"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,14 +40,11 @@
 
     <EditText
         android:id="@+id/name_text"
-        style="@style/textview_style"
+        style="@style/contact_fragment_details_editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:transitionName="name"
-        android:focusableInTouchMode="false"
-        android:background="#FFFFFF"
         app:layout_constraintStart_toEndOf="@id/phone_number_view"
         app:layout_constraintTop_toTopOf="@id/name_view"
         app:layout_constraintBottom_toBottomOf="@id/name_view"
@@ -59,14 +52,11 @@
 
     <EditText
         android:id="@+id/last_name_text"
-        style="@style/textview_style"
+        style="@style/contact_fragment_details_editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:transitionName="lastName"
-        android:focusableInTouchMode="false"
-        android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/last_name_view"
         app:layout_constraintStart_toEndOf="@id/phone_number_view"
         app:layout_constraintTop_toTopOf="@+id/last_name_view"
@@ -74,14 +64,11 @@
 
     <EditText
         android:id="@+id/phone_number_text"
-        style="@style/textview_style"
+        style="@style/contact_fragment_details_editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="phone"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:transitionName="phoneNumber"
-        android:focusableInTouchMode="false"
-        android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/phone_number_view"
         app:layout_constraintStart_toEndOf="@id/phone_number_view"
         app:layout_constraintTop_toTopOf="@+id/phone_number_view"
@@ -91,7 +78,7 @@
         android:id="@+id/edit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Edit"
+        android:text="@string/edit_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/phone_number_text" />
 
@@ -100,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Save"
+        android:text="@string/save_button"
         app:layout_constraintStart_toEndOf="@id/edit_button"
         app:layout_constraintTop_toBottomOf="@id/phone_number_text" />
 
