@@ -1,15 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AndroidIntensive_5_Fragments</string>
-    <string name="edit_button">Edit</string>
-    <string name="save_button">Save</string>
-    <string name="name_property">Name:</string>
-    <string name="last_name_property">Last name:</string>
-    <string name="phone_number_property">Phone number:</string>
     <string name="first_name">Xaviera</string>
     <string name="first_lastname">Cleveland</string>
     <string name="first_phone_number">01917-133441</string>
     <string name="second_name">Delores</string>
-    <string name="second_lastname">Bridger</string>
     <string name="second_phone_number">01765-198211</string>
     <string name="third_name">Maya</string>
     <string name="third_lastname">Brittani</string>

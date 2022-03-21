@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
@@ -19,7 +20,11 @@ class ContactDetailsFragment: Fragment(R.layout.fragment_contact_details) {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        saveButtonClickListener = context as SaveButtonClickListener
+
+        if (this.context is SaveButtonClickListener) {
+            saveButtonClickListener = context as SaveButtonClickListener
+        } else throw ClassCastException()
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -106,12 +111,24 @@ class ContactDetailsFragment: Fragment(R.layout.fragment_contact_details) {
                 contactDetails.forEach { editText ->
                     when (editText.transitionName) {
                         NAME -> {
+                            if (editText.text.isNullOrBlank()) {
+                                Toast.makeText(activity, "Please, enter the name", Toast.LENGTH_SHORT).show()
+                                return@setOnClickListener
+                            }
                             editText.text = editText.text
                         }
                         LAST_NAME -> {
+                            if (editText.text.isNullOrBlank()) {
+                                Toast.makeText(activity, "Please, enter the last name", Toast.LENGTH_SHORT).show()
+                                return@setOnClickListener
+                            }
                             editText.text = editText.text
                         }
                         PHONE_NUMBER -> {
+                            if (editText.text.isNullOrBlank()) {
+                                Toast.makeText(activity, "Please, enter the phone number", Toast.LENGTH_SHORT).show()
+                                return@setOnClickListener
+                            }
                             editText.text = editText.text
                         }
                     }
@@ -121,7 +138,6 @@ class ContactDetailsFragment: Fragment(R.layout.fragment_contact_details) {
             }
         }
     }
-
 
     interface SaveButtonClickListener {
         fun onSaveButtonClicked(bundle: Bundle)
